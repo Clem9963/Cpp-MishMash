@@ -1,2 +1,2 @@
 # CppMishMash
-This is the place to store various C++ code. 📚
+A place to store various C++ code. 📚
