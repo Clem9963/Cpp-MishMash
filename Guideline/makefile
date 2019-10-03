@@ -1,6 +1,6 @@
-SRC=producteur.cpp statisticien.cpp tests_catch.cpp main.cpp
+SRC=Cercle.cpp Forme.cpp Point.cpp Rectangle.cpp tests_catch.cpp main.cpp
 #SRC=$(wildcard *.cpp)  
-EXE=cpp3
+EXE=cpp4
 
 CXXFLAGS+=-Wall -Wextra -MMD -g -O2
 LDFLAGS= #-lSDL
