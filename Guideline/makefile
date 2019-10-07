@@ -1,6 +1,6 @@
-SRC=Cercle.cpp Forme.cpp Point.cpp Rectangle.cpp tests_catch.cpp main.cpp
+SRC=Cercle.cpp Forme.cpp Point.cpp Rectangle.cpp Groupe.cpp tests_catch.cpp main.cpp
 #SRC=$(wildcard *.cpp)  
-EXE=cpp4
+EXE=cpp4.bin
 
 CXXFLAGS+=-Wall -Wextra -MMD -g -O2
 LDFLAGS= #-lSDL
