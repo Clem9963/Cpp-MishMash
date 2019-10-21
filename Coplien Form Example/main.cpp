@@ -2,30 +2,36 @@
 
 class M
 {
+  private:
+	int _nb;
+
   public:
 	M()
 	{
 		std::cout << "M::M()" << std::endl;
+		_nb = 42;
 	}
 	~M()
 	{
 		std::cout << "M::~M()" << std::endl;
 	}
-	M(const M &)
+	M(const M &other)
+		: _nb(other._nb)
 	{
 		std::cout << "M::M(const M&)" << std::endl;
 	}
-	M operator=(const M &other)
+	M &operator=(const M &other)
 	{
 		std::cout << "M::=" << std::endl;
-		return M(other);
+		_nb = other._nb;
+		return *this;
 	}
 };
 
 class A
 {
   private:
-	M attr_;
+	M _attr;
 
   public:
 	A()
@@ -36,14 +42,16 @@ class A
 	{
 		std::cout << "A::~A()" << std::endl;
 	}
-	A(const A &)
+	A(const A &other)
+		: _attr(other._attr)
 	{
 		std::cout << "A::A(const A&)" << std::endl;
 	}
-	A operator=(const A &other)
+	A &operator=(const A &other)
 	{
 		std::cout << "A::=" << std::endl;
-		return A(other);
+		_attr = other._attr;
+		return *this;
 	}
 };
 
@@ -64,7 +72,7 @@ class F : public M
 	{
 		std::cout << "F::F(const F&)" << std::endl;
 	}
-	F operator=(const F &other)
+	F &operator=(const F &other)
 	{
 		std::cout << "F::=" << std::endl;
 		M::operator=(other);
@@ -79,10 +87,11 @@ int main(int, char **)
 	F f2 = f1;
 
 	f1 = f2;
-*/
+	*/
 
 	A a1;
-	A a2 = a1;
+	A a2;
+	a2 = a1;
 
 	return 0;
 }
