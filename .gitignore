@@ -1,5 +1,6 @@
 Intro/executable.bin
 Object Programming/executable.bin
-.vscode
 Guideline/build
 Guideline/*.bin
+.vscode
+.clang-format
