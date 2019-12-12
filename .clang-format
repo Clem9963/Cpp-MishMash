@@ -1,0 +1,20 @@
+IndentWidth: 4
+TabWidth: 4
+UseTab: Always
+ColumnLimit: 0
+AllowShortFunctionsOnASingleLine: All
+AllowShortBlocksOnASingleLine: true
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: true
+AlwaysBreakAfterReturnType: None
+BreakBeforeBraces: Custom
+BraceWrapping:
+    AfterFunction: true
+    AfterClass: true
+    AfterEnum: true
+    AfterControlStatement: true
+    BeforeCatch: true
+    BeforeElse: true
+    SplitEmptyFunction: false
+    SplitEmptyRecord: false
+    SplitEmptyNamespace: false
