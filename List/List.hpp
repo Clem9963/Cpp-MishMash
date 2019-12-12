@@ -2,12 +2,14 @@
 #include <iostream>
 
 template <typename T>
-class List {
+class List
+{
   public:
 	class ItList;
 
   private:
-	class Cell {
+	class Cell
+	{
 	  private:
 		T _data;
 		Cell *_next;
@@ -26,12 +28,14 @@ class List {
 	Cell *_last;
 
   public:
-	class ItList {
+	class ItList
+	{
 	  private:
 		Cell *_cell;
 
 	  public:
-		class NullIteratorException : public std::exception {
+		class NullIteratorException : public std::exception
+		{
 			virtual const char *what() const noexcept;
 		};
 
@@ -41,7 +45,7 @@ class List {
 		bool equals(const ItList &other) const;
 		bool operator!=(const ItList &other) const;
 		T &operator*();
-		ItList &operator++();   // prefixed version
+		ItList &operator++();	// prefixed version
 		ItList operator++(int); // postfixed version
 
 		friend List;
